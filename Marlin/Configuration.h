@@ -3343,7 +3343,7 @@
    * BLACK_MARLIN - Theme with 'black' background
    * ANET_BLACK   - Theme used for Anet ET4/5
    */
-  #define TFT_THEME BLACK_MARLIN
+  #define TFT_THEME ANET_BLACK
 
   //#define TFT_SHARED_IO   // I/O is shared between TFT display and other devices. Disable async data transfer.
 
@@ -3383,17 +3383,17 @@
 #define TOUCH_SCREEN
 #if ENABLED(TOUCH_SCREEN)
   #define BUTTON_DELAY_EDIT      50 // (ms) Button repeat delay for edit screens
-  #define BUTTON_DELAY_MENU      50 // (ms) Button repeat delay for menus
+  #define BUTTON_DELAY_MENU      80 // (ms) Button repeat delay for menus
 
   //#define DISABLE_ENCODER         // Disable the click encoder, if any
-  //#define TOUCH_IDLE_SLEEP_MINS 5 // (minutes) Display Sleep after a period of inactivity. Set with M255 S.
+  #define TOUCH_IDLE_SLEEP_MINS 10 // (minutes) Display Sleep after a period of inactivity. Set with M255 S.
 
   #define TOUCH_SCREEN_CALIBRATION
 
-   #define TOUCH_CALIBRATION_X 17194
-   #define TOUCH_CALIBRATION_Y -11159
-   #define TOUCH_OFFSET_X        -39
-   #define TOUCH_OFFSET_Y        334
+   #define TOUCH_CALIBRATION_X 17880
+   #define TOUCH_CALIBRATION_Y -12234
+   #define TOUCH_OFFSET_X        -45
+   #define TOUCH_OFFSET_Y        349
    #define TOUCH_ORIENTATION TOUCH_LANDSCAPE
 
   #if ALL(TOUCH_SCREEN_CALIBRATION, EEPROM_SETTINGS)
